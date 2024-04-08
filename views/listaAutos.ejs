@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Color buscado: <%= color %></p>
+    <div>
+      <% if(autos.length === 0){ %>
+        <p>NO hay autos del color: <%= color %></p>
+      <% }else{ %>
+      <ul>
+        <% for(i = 0; i < autos.length; i++){ %>
+          <li><%= autos[i].marca %></li>
+        <% }%>
+      </ul>
+      <% } %>
+    </div>
+  </body>
+</html>
